@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.arctic4x'
+
 apply plugin: 'kotlin-android'
 
 android {
