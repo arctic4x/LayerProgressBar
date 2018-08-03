@@ -108,7 +108,7 @@ class LayerProgressBar : View {
         layerLength = typedArray.getInt(R.styleable.LayerProgressBar_lpb_layerLength, DEFAULT_LAYER_LENGTH)
         ovalRadius = typedArray.getDimension(R.styleable.LayerProgressBar_lpb_ovalRadius, DEFAULT_OVAL_RADIUS)
         paint.color = typedArray.getColor(R.styleable.LayerProgressBar_lpb_color, resources.getColor(DEFAULT_COLOR))
-        isMultiThreading = typedArray.getBoolean(R.styleable.LayerProgressBar_lpb_multiThreading, false)
+        isMultiThreading = typedArray.getBoolean(R.styleable.LayerProgressBar_lpb_multiThreading, true)
         typedArray.recycle()
         initFigures()
         startProgress()
