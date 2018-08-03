@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LayerProgressBar">
+        <attr name="lpb_layerCount" format="integer" />
+        <attr name="lpb_layerGap" format="dimension" />
+        <attr name="lpb_layerWidth" format="dimension" />
+        <attr name="lpb_layerLength" format="integer" />
+        <attr name="lpb_ovalRadius" format="dimension" />
+        <attr name="lpb_color" format="color" />
+        <attr name="lpb_multiThreading" format="boolean" />
+    </declare-styleable>
+</resources>
