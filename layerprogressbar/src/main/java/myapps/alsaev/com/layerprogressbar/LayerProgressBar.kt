@@ -114,11 +114,26 @@ class LayerProgressBar : View {
         startProgress()
     }
 
+    /**
+     * size always wrap content
+     * and can be changed by setting params
+     * like ovalCount, ovalRadius and etc...
+     */
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         setMeasuredDimension(viewWidth + Math.round(strokeWidth), viewHeght + Math.round(strokeWidth))
     }
 
-    fun startProgress() {
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        startProgress()
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        stopProgress()
+    }
+
+    private fun startProgress() {
         isRunning = true
         if (isMultiThreading) startMultiThread()
         else startSingleThread()
